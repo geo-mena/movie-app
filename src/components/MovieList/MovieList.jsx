@@ -7,6 +7,8 @@ import "./MovieList.css";
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const moviesPerPage = 10;
 
   useEffect(() => {
     axios
@@ -28,12 +30,18 @@ const MovieList = () => {
     setFilteredMovies(filtered);
   };
 
+  const indexOfLastMovie = currentPage * moviesPerPage;
+  const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
+  const currentMovies = filteredMovies.slice(indexOfFirstMovie, indexOfLastMovie);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <div className="content">
       <Header onSearch={handleSearch} />
       <h2  className="list-title">Peliculas disponibles</h2>
       <div className="movie-container">
-        {filteredMovies.map((movie) => (
+      {currentMovies.map((movie) => (
           <div key={movie.id} className="movie-item">
             <Link to={`/movie/${movie.id}`}>
               <img
@@ -49,6 +57,13 @@ const MovieList = () => {
               <span className="movie-editor">{movie.editor}</span>
             </div>
           </div>
+        ))}
+      </div>
+      <div className="pagination">
+        {Array.from({ length: Math.ceil(filteredMovies.length / moviesPerPage) }).map((_, index) => (
+          <button key={index + 1} onClick={() => paginate(index + 1)}>
+            {index + 1}
+          </button>
         ))}
       </div>
     </div>
