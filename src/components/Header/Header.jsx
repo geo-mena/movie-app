@@ -17,7 +17,7 @@ const Header = ({ onSearch }) => {
     <div className="main-header">
       <div className="header-content">
         <Link to="/" className="logo-link">
-          <h2 className="logo">Movie Sumary</h2>
+          <h2 className="logo">FilmSnap</h2>
         </Link>
         <div className="search-container">
           <input

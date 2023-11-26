@@ -7,6 +7,7 @@ import "./MovieDetail.css";
 const MovieDetail = () => {
   const [movie, setMovie] = useState(null);
   const { id } = useParams();
+  
 
   useEffect(() => {
     axios
@@ -14,6 +15,7 @@ const MovieDetail = () => {
       .then((response) => {
         // Actualizar el estado con los datos recibidos
         setMovie(response.data.movie);
+        
       })
       .catch((error) => {
         console.error("Error al obtener los detalles de la película:", error);
@@ -23,6 +25,9 @@ const MovieDetail = () => {
   if (!movie) {
     return <div>Cargando...</div>;
   }
+
+  const videoWidth = "100%";
+  const videoHeight = "600px";
 
   return (
     <div className="content-primary">
@@ -37,27 +42,26 @@ const MovieDetail = () => {
           <p>
             <span className="genre">{movie.genre}</span>
           </p>
-          <h3>Descripción general</h3>
+          <h2>Descripción general</h2>
           <p>{movie.review}</p>
-          <span>
-            {" "}
-            <b>Director:</b> {movie.director}{" "}
-          </span>
+          <p>
+            Director: <span className="secondary">{movie.director}</span>
+          </p>
           <hr />
-          <span>
-            {" "}
-            <b>Escritor:</b> {movie.writer}{" "}
-          </span>
+          <p>
+            Escritor: <span className="secondary">{movie.writer}</span>
+          </p>
           <hr />
-          <span>
-            {" "}
-            <b>Editor:</b> {movie.editor}{" "}
-          </span>
+          <p>
+            Editor: <span className="secondary">{movie.editor}</span>
+          </p>
           <hr />
         </div>
       </div>
       <div className="video">
-        <YouTube videoId={getYouTubeVideoId(movie.url[0])} />
+        <h2 className="resumen">Resumen</h2>
+        <YouTube videoId={getYouTubeVideoId(movie.url[0])} opts={{ width: videoWidth, height: videoHeight }} />
+        
       </div>
     </div>
   );

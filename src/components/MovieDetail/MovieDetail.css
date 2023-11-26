@@ -4,10 +4,15 @@
     justify-content: center;
     align-items: center;
     margin: 2rem;
+    height: 100%;
 }
 
 .content-detail {
     display: flex;
+}
+
+img {
+    border-radius: 8px;
 }
 
 .overview {
@@ -17,10 +22,11 @@
 }
 
 .genre{
-    border: 1px solid #ccc;
+    border: 1px solid #da2f68;
     border-radius: 8px;
     padding: 5px;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    background-color: #da2f68;
 }
 
 hr {
@@ -30,8 +36,17 @@ hr {
     opacity: 0.2;
 }
 
+.resumen {
+    text-align: left;
+
+}
+
 .video {
     width: 100%;
     height: 100%;
-    margin-top: 4rem;
+    margin-top: 2rem;
+}
+
+.secondary {
+    color: #B4B4B3;
 }
