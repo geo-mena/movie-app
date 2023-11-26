@@ -28,7 +28,7 @@ const MovieDetail = () => {
 
   const videoWidth = "100%";
   const videoHeight = "600px";
-
+  
   return (
     <div className="content-primary">
       <div className="content-detail">
@@ -60,7 +60,7 @@ const MovieDetail = () => {
       </div>
       <div className="video">
         <h2 className="resumen">Resumen</h2>
-        <YouTube videoId={getYouTubeVideoId(movie.url[0])} opts={{ width: videoWidth, height: videoHeight }} />
+        <YouTube videoId={getYouTubeVideoId(movie.url[0])} opts={{ width: videoWidth, height: videoHeight, }} />
         
       </div>
     </div>
