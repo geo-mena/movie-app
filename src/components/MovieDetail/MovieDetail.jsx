@@ -28,7 +28,7 @@ const MovieDetail = () => {
 
   const videoWidth = "100%";
   const videoHeight = "600px";
-  
+
   return (
     <div className="content-primary">
       <div className="content-detail">
