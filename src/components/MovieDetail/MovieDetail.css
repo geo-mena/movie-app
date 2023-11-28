@@ -1,8 +1,8 @@
 .content-primary {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin: 2rem;
     height: 100%;
 }
@@ -21,7 +21,7 @@ img {
     margin-top: -2rem;
 }
 
-.genre{
+.genre {
     border: 1px solid #da2f68;
     border-radius: 8px;
     padding: 5px;
@@ -48,4 +48,29 @@ hr {
 
 .secondary {
     color: #B4B4B3;
+}
+
+.back-button {
+    display: flex;
+    height: 40px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    text-decoration: none;
+    margin-bottom: 3rem;
+
+}
+
+.back-button>svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
 }

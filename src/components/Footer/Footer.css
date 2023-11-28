@@ -1,0 +1,14 @@
+.footer {
+  background-color: #04152d !important;
+  color: white;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.footer a {
+  color: #B4B4B3;
+  text-decoration: none;
+}

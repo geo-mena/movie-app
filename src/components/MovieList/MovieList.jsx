@@ -32,16 +32,32 @@ const MovieList = () => {
 
   const indexOfLastMovie = currentPage * moviesPerPage;
   const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
-  const currentMovies = filteredMovies.slice(indexOfFirstMovie, indexOfLastMovie);
+  const currentMovies = filteredMovies.slice(
+    indexOfFirstMovie,
+    indexOfLastMovie
+  );
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    const totalPages = Math.ceil(filteredMovies.length / moviesPerPage);
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
 
   return (
     <div className="content">
       <Header onSearch={handleSearch} />
-      <h2  className="list-title">Peliculas disponibles</h2>
+      <h2 className="list-title">Peliculas disponibles</h2>
       <div className="movie-container">
-      {currentMovies.map((movie) => (
+        {currentMovies.map((movie) => (
           <div key={movie.id} className="movie-item">
             <Link to={`/movie/${movie.id}`}>
               <img
@@ -60,11 +76,30 @@ const MovieList = () => {
         ))}
       </div>
       <div className="pagination">
-        {Array.from({ length: Math.ceil(filteredMovies.length / moviesPerPage) }).map((_, index) => (
-          <button key={index + 1} onClick={() => paginate(index + 1)}>
+        <button onClick={handlePrevPage} disabled={currentPage === 1}>
+          Anterior
+        </button>
+        {Array.from({
+          length: Math.ceil(filteredMovies.length / moviesPerPage),
+        }).map((_, index) => (
+          <button
+            key={index + 1}
+            onClick={() => paginate(index + 1)}
+            className={`pagination-button ${
+              currentPage === index + 1 ? "active" : ""
+            }`}
+          >
             {index + 1}
           </button>
         ))}
+        <button
+          onClick={handleNextPage}
+          disabled={
+            currentPage === Math.ceil(filteredMovies.length / moviesPerPage)
+          }
+        >
+          Siguiente
+        </button>
       </div>
     </div>
   );
