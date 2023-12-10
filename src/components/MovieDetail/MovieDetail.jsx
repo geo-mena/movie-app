@@ -50,7 +50,9 @@ const MovieDetail = () => {
           style={{ maxWidth: "300px" }}
         />
         <div className="overview">
-          <h1>{movie.title}</h1>
+          <h1>
+            {movie.title} ({movie.release_date})
+          </h1>
           <p>
             <span className="genre">{movie.genre}</span>
           </p>

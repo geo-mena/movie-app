@@ -8,7 +8,7 @@ const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const moviesPerPage = 10;
+  const moviesPerPage = 12;
 
   useEffect(() => {
     axios

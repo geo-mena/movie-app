@@ -56,7 +56,7 @@ hr {
     width: 100px;
     align-items: center;
     justify-content: center;
-    background-color: #eeeeee4b;
+    background-color: black;
     border-radius: 8px;
     letter-spacing: 1px;
     transition: all 0.2s linear;
@@ -65,7 +65,14 @@ hr {
     background: #fff;
     text-decoration: none;
     margin-bottom: 3rem;
+    color: black;
 
+}
+
+.back-button:hover {
+    background-color: #da2f68;
+    transition: all 0.2s linear;
+    color: #fff;
 }
 
 .back-button>svg {
