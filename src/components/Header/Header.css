@@ -1,16 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  margin-top: -3rem;
-  margin-bottom: -5rem;
+  margin-bottom: -4rem;
 }
 
 .logo-link {
   text-decoration: none;
   color: #fff;
-  margin-top: 4rem;
+  margin-top: -4rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+.logo h2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .group {
@@ -19,7 +32,7 @@
   align-items: center;
   position: relative;
   max-width: 400px;
-  margin-top: -2rem;
+  margin-top: -4rem;
 }
 
 .input {

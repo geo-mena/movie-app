@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaPlayCircle } from "react-icons/fa";
 import "./Header.css";
 
 const Header = ({ onSearch }) => {
@@ -25,7 +26,10 @@ const Header = ({ onSearch }) => {
     <div className="main-header">
       <div className="header-content">
         <Link to="/" className="logo-link">
-          <h2 className="logo">En minutos</h2>
+          <h1 className="logo">
+            EN MINUT
+            <FaPlayCircle />S
+          </h1>
         </Link>
         <div className="group">
           <svg
