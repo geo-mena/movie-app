@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { getMovieById } from "../../api/movies";
 import YouTube from "react-youtube";
 import "./MovieDetail.css";
 
@@ -10,8 +10,7 @@ const MovieDetail = () => {
   const navigate = useNavigate(); // Obtener el historial de navegación
 
   useEffect(() => {
-    axios
-      .get(`https://api-movies-m9vp.onrender.com/movies/${id}`)
+    getMovieById(id) // Usar la función de la API
       .then((response) => {
         // Actualizar el estado con los datos recibidos
         setMovie(response.data.movie);

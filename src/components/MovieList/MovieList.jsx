@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+//import axios from "axios";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
+import { getMovies } from "../../api/movies";
 import "./MovieList.css";
 
 const MovieList = () => {
@@ -11,10 +12,8 @@ const MovieList = () => {
   const moviesPerPage = 12;
 
   useEffect(() => {
-    axios
-      .get("https://api-movies-m9vp.onrender.com/movies")
+    getMovies()
       .then((response) => {
-        // Actualizar el estado con los datos recibidos
         setMovies(response.data.movies);
         setFilteredMovies(response.data.movies);
       })
