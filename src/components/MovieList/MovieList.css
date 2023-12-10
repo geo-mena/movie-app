@@ -69,3 +69,17 @@
     background-color: #da2f68;
     border: 1px solid #da2f68;
 }
+
+/* Estilos para pantallas de tablet */
+@media (max-width: 768px) {
+    .movie-container {
+        flex-direction: column;
+    }
+}
+
+/* Estilos para pantallas de móvil */
+@media (max-width: 480px) {
+    .movie-container {
+        flex-direction: column;
+    }
+}
