@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
@@ -25,7 +25,7 @@ const Header = ({ onSearch }) => {
     <div className="main-header">
       <div className="header-content">
         <Link to="/" className="logo-link">
-          <h2 className="logo">FilmSnap</h2>
+          <h2 className="logo">En minutos</h2>
         </Link>
         <div className="group">
           <svg

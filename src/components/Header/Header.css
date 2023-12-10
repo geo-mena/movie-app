@@ -39,6 +39,10 @@
   color: #777;
 }
 
+.input:focus {
+  border: 2px solid #da2f68;
+}
+
 .icon {
   position: absolute;
   left: 1rem;

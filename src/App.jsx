@@ -1,9 +1,7 @@
 import "./App.css";
-import React from "react";
 import MovieList from "./components/MovieList/MovieList";
 import MovieDetail from "./components/MovieDetail/MovieDetail";
-import Header from "./components/Header/Header";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 
 function App() {

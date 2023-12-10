@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
@@ -55,7 +55,7 @@ const MovieList = () => {
   return (
     <div className="content">
       <Header onSearch={handleSearch} />
-      <h2 className="list-title">Peliculas disponibles</h2>
+      <h2 className="list-title">Películas disponibles</h2>
       <div className="movie-container">
         {currentMovies.map((movie) => (
           <div key={movie.id} className="movie-item">
