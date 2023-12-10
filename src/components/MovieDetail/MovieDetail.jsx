@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import YouTube from "react-youtube";
@@ -11,7 +11,7 @@ const MovieDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/movies/${id}`)
+      .get(`https://api-movies-m9vp.onrender.com/movies/${id}`)
       .then((response) => {
         // Actualizar el estado con los datos recibidos
         setMovie(response.data.movie);

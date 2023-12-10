@@ -22,9 +22,9 @@
 }
 
 .movie-image:hover {
-    filter: blur(2px);
-    transition: filter 0.3s;
-
+    filter: brightness(0.7);
+    transition: all 0.2s linear;
+    cursor: pointer;
 }
 
 .movie-details {

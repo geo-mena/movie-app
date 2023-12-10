@@ -12,7 +12,7 @@ const MovieList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/movies")
+      .get("https://api-movies-m9vp.onrender.com/movies")
       .then((response) => {
         // Actualizar el estado con los datos recibidos
         setMovies(response.data.movies);
