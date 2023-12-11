@@ -25,7 +25,7 @@ const MovieDetail = () => {
   }
 
   const videoWidth = "100%";
-  const videoHeight = "600px";
+  const videoHeight = window.innerWidth <= 768 ? "200px" : "600px";
 
   return (
     <div className="content-primary">
@@ -75,7 +75,7 @@ const MovieDetail = () => {
         <h2 className="resumen">Resumen</h2>
         <YouTube
           videoId={getYouTubeVideoId(movie.url[0])}
-          opts={{ width: videoWidth, height: videoHeight }}
+          opts={{ width: videoWidth, height: videoHeight, autoplay: 1 }}
         />
       </div>
     </div>
@@ -85,7 +85,7 @@ const MovieDetail = () => {
 // Función para obtener el ID del video de YouTube desde la URL
 const getYouTubeVideoId = (url) => {
   const match = url.match(
-    /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/
+    /(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/\s]{11})/
   );
   return match && match[1];
 };
