@@ -80,3 +80,38 @@
   color: white;
   transition: all 0.2s linear;
 }
+
+/* Responsive para Moviles */
+@media (max-width: 767px) {
+  .header-content {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .logo-link {
+    margin-top: -4rem;
+  }
+
+  .logo {
+    margin-bottom: -4rem;
+  }
+
+  .group {
+    max-width: none;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .input {
+    padding-left: 2rem;
+    width: 80%;
+  }
+
+  .icon {
+    left: 0.5rem;
+  }
+
+  .search-button {
+    width: 20%;
+  }
+}
