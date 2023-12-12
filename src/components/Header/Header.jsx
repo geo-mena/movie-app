@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaPlayCircle } from "react-icons/fa";
 import "./Header.css";
+import PropTypes from "prop-types";
 
 const Header = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -10,10 +11,8 @@ const Header = ({ onSearch }) => {
     setSearchTerm(e.target.value);
   };
 
-  const handleKeyPress = (e) => {
-    // Verificar si la tecla presionada es "Enter"
+  const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      // Realizar la búsqueda
       onSearch(searchTerm);
     }
   };
@@ -48,7 +47,7 @@ const Header = ({ onSearch }) => {
             type="search"
             value={searchTerm}
             onChange={handleSearchChange}
-            onKeyPress={handleKeyPress}
+            onKeyDown={handleKeyDown}
             className="input search-input"
           />
           <button onClick={handleSearch} className="search-button">
@@ -58,6 +57,10 @@ const Header = ({ onSearch }) => {
       </div>
     </div>
   );
+};
+
+Header.propTypes = {
+  onSearch: PropTypes.func.isRequired,
 };
 
 export default Header;

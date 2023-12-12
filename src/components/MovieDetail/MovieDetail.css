@@ -35,6 +35,18 @@ img {
     color: #fff;
 }
 
+.streaming-icon {
+    filter: invert(1);
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.streaming-icon:hover {
+    transform: scale(1.1);
+    transition: all 0.2s linear;
+}
+
 .overview {
     text-align: left;
     margin-left: 2rem;

@@ -1,23 +1,29 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { getMovieById } from "../../api/movies";
+import { getMovieById, getStreamingForMovie } from "../../api/movies";
 import YouTube from "react-youtube";
 import "./MovieDetail.css";
 
 const MovieDetail = () => {
   const [movie, setMovie] = useState(null);
+  const [streaming, setStreaming] = useState(null);
   const { id } = useParams();
   const navigate = useNavigate(); // Obtener el historial de navegación
 
   useEffect(() => {
-    getMovieById(id) // Usar la función de la API
-      .then((response) => {
-        // Actualizar el estado con los datos recibidos
-        setMovie(response.data.movie);
-      })
-      .catch((error) => {
-        console.error("Error al obtener los detalles de la película:", error);
-      });
+    // Obtener detalles de la película
+    getMovieById(id)
+      .then((response) => setMovie(response.data.movie))
+      .catch((error) =>
+        console.error("Error al obtener detalles de la película:", error)
+      );
+
+    // Obtener información de streaming
+    getStreamingForMovie(id)
+      .then((response) => setStreaming(response.data.streaming_entries))
+      .catch((error) =>
+        console.error("Error al obtener información de streaming:", error)
+      );
   }, [id]);
 
   if (!movie) {
@@ -51,15 +57,20 @@ const MovieDetail = () => {
             style={{ maxWidth: "300px" }}
           />
 
-          <Link
-            to="https://www.primevideo.com/-/es/detail/0R7K0TE549R347J0B6BK9HIH58/ref=atv_dl_rdr"
-            target="_blank"
-            rel=""
-            className="link-btn"
-          >
-            {" "}
-            Ver ahora en streaming
-          </Link>
+          {streaming &&
+            streaming.map((entry) => (
+              <div key={entry.id} className="streaming-entry">
+                <a
+                  href={entry.url_video}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-btn"
+                >
+                  <img src={entry.url_icono} className="streaming-icon" />
+                  Ver en streaming
+                </a>
+              </div>
+            ))}
         </div>
         <div className="overview">
           <h1>
