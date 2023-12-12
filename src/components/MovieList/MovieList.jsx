@@ -66,8 +66,16 @@ const MovieList = () => {
                 className="movie-image"
               />
             </Link>
-            <div className="movie-details">
-              <span className="movie-title">{movie.title}</span>
+            <div className="movie-details" style={{ maxWidth: "200px" }}>
+              <span
+                className="movie-title"
+                style={{
+                  wordWrap: "break-word",
+                }}
+              >
+                {movie.title}
+              </span>
+              <span> ({movie.release_date})</span>
               <br />
               <span className="movie-editor">{movie.editor}</span>
             </div>
