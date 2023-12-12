@@ -16,7 +16,7 @@ img {
     border-top-left-radius: 8px;
 }
 
-.streaming-link {
+.link-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,11 +25,14 @@ img {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     height: 40px;
-}
-
-.link-btn {
     text-decoration: none !important;
     color: #da2f68;
+}
+
+.link-btn:hover {
+    background-color: #da2f68;
+    transition: all 0.2s linear;
+    color: #fff;
 }
 
 .overview {
@@ -96,6 +99,11 @@ hr {
     margin-right: 5px;
     margin-left: 5px;
     font-size: 20px;
+    transition: all 0.4s ease-in;
+}
+
+.back-button:hover>svg {
+    transform: translateX(-4px);
     transition: all 0.4s ease-in;
 }
 
