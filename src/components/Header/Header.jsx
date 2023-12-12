@@ -28,7 +28,7 @@ const Header = ({ onSearch }) => {
         <Link to="/" className="logo-link">
           <h1 className="logo">
             EN MINUT
-            <FaPlayCircle />S
+            <FaPlayCircle className="icon-circle" />S
           </h1>
         </Link>
         <div className="group">
