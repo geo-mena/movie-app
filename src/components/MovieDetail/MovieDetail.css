@@ -12,7 +12,24 @@
 }
 
 img {
-    border-radius: 8px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.streaming-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #da2f68;
+    margin-top: -6px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 40px;
+}
+
+.link-btn {
+    text-decoration: none !important;
+    color: #da2f68;
 }
 
 .overview {

@@ -43,11 +43,24 @@ const MovieDetail = () => {
       </Link>
 
       <div className="content-detail">
-        <img
-          src={movie.image}
-          alt={movie.title}
-          style={{ maxWidth: "300px" }}
-        />
+        <div>
+          <img
+            src={movie.image}
+            alt={movie.title}
+            style={{ maxWidth: "300px" }}
+          />
+          <div className="streaming-link">
+            <Link
+              to="https://www.primevideo.com/-/es/detail/0R7K0TE549R347J0B6BK9HIH58/ref=atv_dl_rdr"
+              target="_blank"
+              rel=""
+              className="link-btn"
+            >
+              {" "}
+              Ver ahora en streaming
+            </Link>
+          </div>
+        </div>
         <div className="overview">
           <h1>
             {movie.title} ({movie.release_date})
