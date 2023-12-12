@@ -26,6 +26,11 @@
   align-items: center;
 }
 
+.icon-circle:hover {
+  color: #da2f68;
+  transition: all 0.2s linear;
+}
+
 .group {
   display: flex;
   line-height: 28px;
