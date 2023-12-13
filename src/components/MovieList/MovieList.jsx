@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-//import axios from "axios";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import { getMovies } from "../../api/movies";
+import Loading from "../Loading/Loading";
 import "./MovieList.css";
+import Footer from "../Footer/Footer";
 
 const MovieList = () => {
+  const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,11 +18,17 @@ const MovieList = () => {
       .then((response) => {
         setMovies(response.data.movies);
         setFilteredMovies(response.data.movies);
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error al obtener la lista de películas:", error);
+        setLoading(false);
       });
   }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   const handleSearch = (query) => {
     const filtered = movies.filter((movie) =>
@@ -108,6 +116,7 @@ const MovieList = () => {
           Siguiente
         </button>
       </div>
+      <Footer />
     </div>
   );
 };
