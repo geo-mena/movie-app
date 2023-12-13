@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
-import MovieList from "./components/MovieList/MovieList";
-import MovieDetail from "./components/MovieDetail/MovieDetail";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import MovieList from "./components/MovieList/MovieList";
+// import MovieDetail from "./components/MovieDetail/MovieDetail";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
 //import Footer from "./components/Footer/Footer";
 import Loading from "./components/Loading/Loading";
+import Router from "./routes/index";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -18,14 +19,7 @@ function App() {
     return <Loading />;
   }
 
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" exact element={<MovieList />} />
-        <Route path="/movie/:id" element={<MovieDetail />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  return <Router />;
 }
 
 export default App;
