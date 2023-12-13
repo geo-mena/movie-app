@@ -54,11 +54,15 @@ const MovieDetail = () => {
       </Link>
 
       <div className="content-detail">
-        <div>
+        <div className="content-movie">
           <img
             src={movie.image}
             alt={movie.title}
-            style={{ maxWidth: "300px" }}
+            style={{
+              maxWidth: "300px",
+              borderTopLeftRadius: "8px",
+              borderTopRightRadius: "8px",
+            }}
           />
 
           {streaming &&
