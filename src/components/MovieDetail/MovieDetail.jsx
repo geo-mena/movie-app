@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { getMovieById, getStreamingForMovie } from "../../api/movies";
+import Loading from "../Loading/Loading";
 import YouTube from "react-youtube";
 import "./MovieDetail.css";
 
 const MovieDetail = () => {
+  const [loading, setLoading] = useState(true);
   const [movie, setMovie] = useState(null);
   const [streaming, setStreaming] = useState(null);
   const { id } = useParams();
@@ -13,21 +15,23 @@ const MovieDetail = () => {
   useEffect(() => {
     // Obtener detalles de la película
     getMovieById(id)
-      .then((response) => setMovie(response.data.movie))
-      .catch((error) =>
-        console.error("Error al obtener detalles de la película:", error)
-      );
-
-    // Obtener información de streaming
-    getStreamingForMovie(id)
-      .then((response) => setStreaming(response.data.streaming_entries))
-      .catch((error) =>
-        console.error("Error al obtener información de streaming:", error)
-      );
+      .then((response) => {
+        setMovie(response.data.movie);
+        // Obtener información de streaming
+        return getStreamingForMovie(id);
+      })
+      .then((response) => {
+        setStreaming(response.data.streaming_entries);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        setLoading(false);
+      });
   }, [id]);
 
-  if (!movie) {
-    return <div>Cargando...</div>;
+  if (loading) {
+    return <Loading />;
   }
 
   const videoWidth = "100%";
