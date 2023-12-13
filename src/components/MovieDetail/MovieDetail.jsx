@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { getMovieById, getStreamingForMovie } from "../../api/movies";
 import Loading from "../Loading/Loading";
-import YouTube from "react-youtube";
+//import YouTube from "react-youtube";
+import ReactPlayer from "react-player";
 import "./MovieDetail.css";
 
 const MovieDetail = () => {
@@ -105,21 +106,19 @@ const MovieDetail = () => {
       </div>
       <div className="video">
         <h2 className="resumen">Resumen</h2>
-        <YouTube
-          videoId={getYouTubeVideoId(movie.url[0])}
-          opts={{ width: videoWidth, height: videoHeight, autoplay: 1 }}
+        <ReactPlayer
+          url={movie.url[0]}
+          width={videoWidth}
+          height={videoHeight}
+          controls={true}
+          playing={false}
+          muted={true}
+          loop={true}
+          className="video-player"
         />
       </div>
     </div>
   );
-};
-
-// Función para obtener el ID del video de YouTube desde la URL
-const getYouTubeVideoId = (url) => {
-  const match = url.match(
-    /(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/\s]{11})/
-  );
-  return match && match[1];
 };
 
 export default MovieDetail;
