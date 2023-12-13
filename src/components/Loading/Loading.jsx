@@ -1,7 +1,9 @@
+import "./Loading.css"; // Asegúrate de importar o definir estilos CSS para este componente
+
 const Loading = () => {
   return (
-    <div>
-      <h2>Cargando los archivos...</h2>
+    <div className="loading-overlay">
+      <div className="loading-spinner"></div>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import { getMovies } from "../../api/movies";
 import Loading from "../Loading/Loading";
 import "./MovieList.css";
+import Footer from "../Footer/Footer";
 
 const MovieList = () => {
   const [loading, setLoading] = useState(true);
@@ -115,6 +116,7 @@ const MovieList = () => {
           Siguiente
         </button>
       </div>
+      <Footer />
     </div>
   );
 };
