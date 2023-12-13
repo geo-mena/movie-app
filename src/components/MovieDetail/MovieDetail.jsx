@@ -121,4 +121,12 @@ const MovieDetail = () => {
   );
 };
 
+// Función para obtener el ID del video de YouTube desde la URL
+// const getYouTubeVideoId = (url) => {
+//   const match = url.match(
+//     /(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/\s]{11})/
+//   );
+//   return match && match[1];
+// };
+
 export default MovieDetail;
