@@ -5,6 +5,8 @@ import Loading from "../Loading/Loading";
 //import YouTube from "react-youtube";
 import ReactPlayer from "react-player";
 import "./MovieDetail.css";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 //import Rating from "../Rating/Rating";
 
 const MovieDetail = () => {
@@ -40,7 +42,8 @@ const MovieDetail = () => {
   const videoHeight = window.innerWidth <= 768 ? "200px" : "600px";
 
   return (
-    <div className="content-primary">
+    <div className="content">
+      <Header />
       <Link to="#" onClick={() => navigate(-1)} className="back-button">
         <svg
           height="16"
@@ -125,6 +128,7 @@ const MovieDetail = () => {
           className="video-player"
         />
       </div>
+      <Footer />
     </div>
   );
 };

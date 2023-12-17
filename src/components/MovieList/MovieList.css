@@ -56,12 +56,16 @@
 }
 
 .not-found {
-    color: red;
+    color: #B4B4B3;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     margin-top: 8rem;
     margin-bottom: 12rem;
+}
+
+.not-found-span {
+    color: #da2f68;
 }
 
 .pagination {

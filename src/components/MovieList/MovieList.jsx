@@ -102,7 +102,9 @@ const MovieList = () => {
         ))}
       </div>
       {movieNotFound && (
-        <p className="not-found">No se encontraron películas</p>
+        <p className="not-found">
+          No se encontraron <span className="not-found-span">películas!</span>
+        </p>
       )}
       <div className="pagination">
         <button onClick={handlePrevPage} disabled={currentPage === 1}>
