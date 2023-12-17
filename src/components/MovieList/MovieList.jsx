@@ -5,6 +5,7 @@ import { getMovies } from "../../api/movies";
 import Loading from "../Loading/Loading";
 import "./MovieList.css";
 import Footer from "../Footer/Footer";
+import Rating from "../Rating/Rating";
 
 const MovieList = () => {
   const [loading, setLoading] = useState(true);
@@ -67,12 +68,15 @@ const MovieList = () => {
         {currentMovies.map((movie) => (
           <div key={movie.id} className="movie-item">
             <Link to={`/movie/${movie.id}`}>
-              <img
-                src={movie.image}
-                alt={movie.title}
-                style={{ maxWidth: "260px" }}
-                className="movie-image"
-              />
+              <div className="movie-image-container">
+                <img
+                  src={movie.image}
+                  alt={movie.title}
+                  style={{ maxWidth: "260px" }}
+                  className="movie-image"
+                />
+                <Rating className="rating-circle" rating={movie.rating} />
+              </div>
             </Link>
             <div className="movie-details" style={{ maxWidth: "200px" }}>
               <span

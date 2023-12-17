@@ -76,7 +76,10 @@ const MovieDetail = () => {
                   className="link-btn"
                 >
                   <img src={entry.url_icono} className="streaming-icon" />
-                  Ver en streaming
+                  <div className="streaming-text">
+                    <a>Disponible en streaming</a>
+                    <a className="ver-ahora">Ver ahora</a>
+                  </div>
                 </a>
               </div>
             ))}
@@ -90,6 +93,11 @@ const MovieDetail = () => {
           </p>
           <h2>Descripción general</h2>
           <p>{movie.review}</p>
+
+          <p>
+            Reparto principal: <span className="secondary">{movie.cast}</span>
+          </p>
+          <hr />
           <p>
             Director: <span className="secondary">{movie.director}</span>
           </p>

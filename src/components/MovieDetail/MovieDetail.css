@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
 .content-primary {
     display: flex;
     flex-direction: column;
@@ -19,9 +21,21 @@
     margin-top: -6px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    height: 40px;
+    height: 52px;
     text-decoration: none !important;
     color: #da2f68;
+}
+
+.streaming-text {
+    margin-top: 1px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.ver-ahora {
+    margin-top: -8px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .link-btn:hover {
@@ -32,8 +46,8 @@
 
 .streaming-icon {
     margin-right: 5px;
-    width: 25px;
-    height: 25px;
+    width: 36px;
+    height: 36px;
     border-radius: 3px;
 }
 
@@ -50,7 +64,7 @@
 
 .genre {
     border: 1px solid #da2f68;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 5px;
     font-size: 0.8rem;
     background-color: #da2f68;
