@@ -1,19 +1,20 @@
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 import "./Rating.css";
 
 const Rating = ({ rating }) => {
-  let borderColor;
-
-  if (rating <= 5) {
-    borderColor = "red";
-  } else if (rating <= 7) {
-    borderColor = "yellow";
-  } else {
-    borderColor = "green";
-  }
-
   return (
-    <div className="rating-circle" style={{ borderColor }}>
-      {rating}
+    <div className="rating-circle">
+      <CircularProgressbar
+        value={rating * 10}
+        text={`${rating}`}
+        styles={buildStyles({
+          pathColor: rating <= 5 ? "red" : rating <= 7 ? "yellow" : "green",
+          textColor: "black",
+          textSize: "2rem",
+          trailColor: "transparent",
+        })}
+      />
     </div>
   );
 };
