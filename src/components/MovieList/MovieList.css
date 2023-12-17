@@ -55,6 +55,15 @@
     margin-top: -20px;
 }
 
+.not-found {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 12rem;
+}
+
 .pagination {
     display: flex;
     justify-content: center;

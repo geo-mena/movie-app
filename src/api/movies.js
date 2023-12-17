@@ -16,13 +16,6 @@ export const getStreamingForMovie = (movieId) => {
 };
 
 // API para obtener los géneros de una película
-export function getMoviesByGenre(genre) {
-  return fetch(`https://api-movies-exam.onrender.com/movies/genre?genre=${encodeURIComponent(genre)}`)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((data) => data.movies);
+export const getMoviesByGenre = (genre) => {
+  return axios.get(`https://api-movies-exam.onrender.com/movies/genre?genre=${genre}`)
 }

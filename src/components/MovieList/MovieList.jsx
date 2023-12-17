@@ -11,6 +11,7 @@ const MovieList = () => {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
+  const [movieNotFound, setMovieNotFound] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const moviesPerPage = 12;
 
@@ -35,7 +36,13 @@ const MovieList = () => {
     const filtered = movies.filter((movie) =>
       movie.title.toLowerCase().includes(query.toLowerCase())
     );
-    setFilteredMovies(filtered);
+    if (filtered.length === 0) {
+      setMovieNotFound(true);
+      setFilteredMovies([]);
+    } else {
+      setMovieNotFound(false);
+      setFilteredMovies(filtered);
+    }
   };
 
   const indexOfLastMovie = currentPage * moviesPerPage;
@@ -94,6 +101,9 @@ const MovieList = () => {
           </div>
         ))}
       </div>
+      {movieNotFound && (
+        <p className="not-found">No se encontraron películas</p>
+      )}
       <div className="pagination">
         <button onClick={handlePrevPage} disabled={currentPage === 1}>
           Anterior
