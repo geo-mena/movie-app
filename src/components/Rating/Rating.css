@@ -1,21 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
 .rating-circle {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-width: 4px;
-  border-style: solid;
-  background-color: azure;
+  background-color: white;
   font-family: 'Oswald', sans-serif;
   color: black;
-}
-
-.rating-circle:hover {
-  background-color: #da2f68;
-  transition: all 0.2s linear;
-  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2px;
 }
