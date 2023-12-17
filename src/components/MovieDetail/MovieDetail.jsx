@@ -94,7 +94,6 @@ const MovieDetail = () => {
           </p>
           <h2>Descripción general</h2>
           <p>{movie.review}</p>
-
           <p>
             Reparto principal: <span className="secondary">{movie.cast}</span>
           </p>
