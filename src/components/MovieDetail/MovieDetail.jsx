@@ -5,6 +5,7 @@ import Loading from "../Loading/Loading";
 //import YouTube from "react-youtube";
 import ReactPlayer from "react-player";
 import "./MovieDetail.css";
+//import Rating from "../Rating/Rating";
 
 const MovieDetail = () => {
   const [loading, setLoading] = useState(true);
