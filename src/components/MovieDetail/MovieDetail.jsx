@@ -11,7 +11,7 @@ const MovieDetail = () => {
   const [movie, setMovie] = useState(null);
   const [streaming, setStreaming] = useState(null);
   const { id } = useParams();
-  const navigate = useNavigate(); // Obtener el historial de navegación
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Obtener detalles de la película
