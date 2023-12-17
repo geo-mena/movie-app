@@ -24,7 +24,11 @@ const Header = ({ onSearch }) => {
   return (
     <div className="main-header">
       <div className="header-content">
-        <Link to="/" className="logo-link">
+        <Link
+          to=""
+          className="logo-link"
+          onClick={() => window.location.reload()}
+        >
           <h1 className="logo">
             EN MINUT
             <FaPlayCircle className="icon-circle" />S
