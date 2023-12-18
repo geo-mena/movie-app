@@ -8,6 +8,7 @@
 
 ```sh
 cd movie-app
+```
 
 3. Install the project dependencies with `npm install`.
 
@@ -18,4 +19,7 @@ cd movie-app
 2. To build the project for production, use the command `npm run build`.
 
 3. To start the production server, use the command `npm run start`.
+
+```
+
 ```
