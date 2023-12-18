@@ -105,9 +105,9 @@ hr {
     border: none;
     background: #fff;
     text-decoration: none;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     color: black;
-
+    margin-top: 2rem;
 }
 
 .back-button:hover {
