@@ -6,7 +6,7 @@ import Loading from "../Loading/Loading";
 import ReactPlayer from "react-player";
 import "./MovieDetail.css";
 import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
+//import Header from "../Header/Header";
 //import Rating from "../Rating/Rating";
 
 const MovieDetail = () => {
@@ -43,7 +43,6 @@ const MovieDetail = () => {
 
   return (
     <div className="content">
-      <Header />
       <Link to="#" onClick={() => navigate(-1)} className="back-button">
         <svg
           height="16"
