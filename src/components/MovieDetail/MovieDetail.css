@@ -71,6 +71,23 @@
     margin-right: 5px;
 }
 
+.modal-content {
+    display: flex;
+    margin-bottom: -1rem;
+}
+
+.link-modal {
+    margin-top: 14px;
+    margin-left: 2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.link-modal:hover {
+    transition: all 0.2s linear;
+    color: #da2f68;
+    cursor: pointer;
+}
+
 hr {
     width: 100%;
     margin-top: 1rem;

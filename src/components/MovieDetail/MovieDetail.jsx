@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
+import Modal from "react-modal";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { getMovieById, getStreamingForMovie } from "../../api/movies";
 import Loading from "../Loading/Loading";
-//import YouTube from "react-youtube";
 import ReactPlayer from "react-player";
 import "./MovieDetail.css";
 import Footer from "../Footer/Footer";
-//import Header from "../Header/Header";
-//import Rating from "../Rating/Rating";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 const MovieDetail = () => {
   const [loading, setLoading] = useState(true);
@@ -15,6 +15,7 @@ const MovieDetail = () => {
   const [streaming, setStreaming] = useState(null);
   const { id } = useParams();
   const navigate = useNavigate();
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   useEffect(() => {
     // Obtener detalles de la película
@@ -33,6 +34,14 @@ const MovieDetail = () => {
         setLoading(false);
       });
   }, [id]);
+
+  function openModal() {
+    setModalIsOpen(true);
+  }
+
+  function closeModal() {
+    setModalIsOpen(false);
+  }
 
   if (loading) {
     return <Loading />;
@@ -98,6 +107,40 @@ const MovieDetail = () => {
               </span>
             ))}
           </p>
+          <div className="modal-content">
+            <p>
+              TMDB: <span className="secondary">{movie.rating}</span>
+            </p>
+            <span className="link-modal" onClick={openModal}>
+              <FontAwesomeIcon icon={faPlay} /> Ver trailer ahora
+            </span>
+            <Modal
+              isOpen={modalIsOpen}
+              onRequestClose={closeModal}
+              contentLabel="Trailer Modal"
+              style={{
+                overlay: {
+                  backgroundColor: "rgba(0, 0, 0, 0.75)",
+                },
+                content: {
+                  width: "52%",
+                  height: "60%",
+                  margin: "auto",
+                },
+              }}
+            >
+              <ReactPlayer
+                url={movie.url[0]}
+                width="100%"
+                height="428px"
+                controls={true}
+                playing={false}
+                muted={true}
+                loop={true}
+                className=""
+              />
+            </Modal>
+          </div>
           <h2>Descripción general</h2>
           <p>{movie.review}</p>
           <p>
