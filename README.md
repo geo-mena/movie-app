@@ -5,7 +5,7 @@
 1. Clone the repository to your local machine using:
 
 ```sh
-git clone https://github.com/geo-mena/movie-app.git`
+git clone https://github.com/geo-mena/movie-app.git
 ```
 
 2. Navigate to the project directory with the following command:
@@ -37,5 +37,5 @@ npm run build
 3. To start the production server, use the command:
 
 ```sh
-npm run start`
+npm run start
 ```
