@@ -123,21 +123,23 @@ const MovieDetail = () => {
                   backgroundColor: "rgba(0, 0, 0, 0.75)",
                 },
                 content: {
-                  width: "52%",
+                  width: "50%",
                   height: "60%",
                   margin: "auto",
+                  padding: "0",
+                  borderColor: "rgba(0, 0, 0, 0.75)",
+                  backgroundColor: "black",
                 },
               }}
             >
               <ReactPlayer
-                url={movie.url[0]}
+                url={movie.trailer}
                 width="100%"
-                height="428px"
+                height="423px"
                 controls={true}
                 playing={false}
                 muted={true}
                 loop={true}
-                className=""
               />
             </Modal>
           </div>
