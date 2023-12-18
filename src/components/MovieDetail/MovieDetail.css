@@ -68,6 +68,7 @@
     padding: 5px;
     font-size: 0.8rem;
     background-color: #da2f68;
+    margin-right: 5px;
 }
 
 hr {
@@ -105,9 +106,9 @@ hr {
     border: none;
     background: #fff;
     text-decoration: none;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: black;
-    margin-top: 2rem;
+    margin-top: -2rem;
 }
 
 .back-button:hover {

@@ -42,7 +42,7 @@ const MovieDetail = () => {
   const videoHeight = window.innerWidth <= 768 ? "200px" : "600px";
 
   return (
-    <div className="content">
+    <div className="content-primary">
       <Link to="#" onClick={() => navigate(-1)} className="back-button">
         <svg
           height="16"
@@ -92,7 +92,11 @@ const MovieDetail = () => {
             {movie.title} ({movie.release_date})
           </h1>
           <p>
-            <span className="genre">{movie.genre}</span>
+            {movie.genre.split(",").map((genre, index) => (
+              <span key={index} className="genre">
+                {genre.trim()}
+              </span>
+            ))}
           </p>
           <h2>Descripción general</h2>
           <p>{movie.review}</p>
