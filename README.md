@@ -62,7 +62,7 @@ npm run start
 - React Player is utilized for playing the trailers and summaries of the movies.
 - The application's styles are written in separate CSS files for each component.
 - ESLint is used for static code analysis and to identify coding issues.
-- **VERCEL** is used for deploying the application: https://en-minutos.vercel.app/
+- **VERCEL** is used for deploying the application: [See APP](https://en-minutos.vercel.app/)
 - Also, it's worth mentioning that **POSTMAN** was used for querying and updating movies.
 
 #### If you've made it this far, thank you very much.
