@@ -60,4 +60,5 @@ npm run start
 #### If you've made it this far, thank you very much.
 
 > Geovanni Aberto Mena
-> <img src="https://github.com/darsaveli/Mariam/blob/main/1479814528_webarebears.gif" width="385px" align="center">
+
+<img src="https://github.com/darsaveli/Mariam/blob/main/1479814528_webarebears.gif" width="385px" align="center">
