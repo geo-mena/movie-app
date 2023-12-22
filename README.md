@@ -56,3 +56,8 @@ npm run start
 - ESLint is used for static code analysis and to identify coding issues.
 - **VERCEL** is used for deploying the application: https://en-minutos.vercel.app/
 - Also, it's worth mentioning that **POSTMAN** was used for querying and updating movies.
+
+#### If you've made it this far, thank you very much.
+
+> Geovanni Aberto Mena
+> <img src="https://github.com/darsaveli/Mariam/blob/main/1479814528_webarebears.gif" width="385px" align="center">
