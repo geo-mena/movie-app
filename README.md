@@ -10,7 +10,7 @@ In general summary, **En Minutos** is a personal project that revolves around re
 - Clicking on a selected movie will open a screen with all its details, including: **Title, release year, poster, rating, trailer, review, main cast, director, writer, and YouTube editor.**
 - For the trailer, users need to click on "watch trailer," and a popup will open with the trailer video.
 - As users scroll, a video player will appear with a movie summary extracted from YouTube, corresponding to the previously mentioned editor.
-- It is worth noting that the app is fully responsive across most devices.
+- It is worth noting that the app is fully **responsive** across most devices.
 
 ### Setup
 
