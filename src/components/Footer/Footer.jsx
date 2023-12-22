@@ -13,7 +13,11 @@ const Footer = () => {
           geovannimena
         </a>
         . The source code is on{" "}
-        <a href="https://github.com/geo-mena" target="__blank" rel="noreferrer">
+        <a
+          href="https://github.com/geo-mena/movie-app"
+          target="__blank"
+          rel="noreferrer"
+        >
           GitHub
         </a>
       </p>
