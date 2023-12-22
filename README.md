@@ -22,19 +22,19 @@ npm install
 
 ## Running the Project
 
-1. To start the development server, use the command:
+To start the development server, use the command:
 
 ```sh
 npm run dev
 ```
 
-2. To build the project for production, use the command:
+To build the project for production, use the command:
 
 ```sh
 npm run build
 ```
 
-3. To start the production server, use the command:
+To start the production server, use the command:
 
 ```sh
 npm run start
