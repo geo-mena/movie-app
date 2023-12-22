@@ -39,3 +39,12 @@ npm run build
 ```sh
 npm run start
 ```
+
+## Principales características de tu proyecto:
+
+-
+
+## Recursos
+
+- API: Fue realiza en python con Django y posteriormente desplegada en RENDER.
+- DB: Fue realiza en postgreSQL y desplegada de igual menera en RENDER.
