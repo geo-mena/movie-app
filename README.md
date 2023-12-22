@@ -7,8 +7,9 @@ In general summary, **En Minutos** is a personal project that revolves around re
 - Displays a list of all available movies, along with their respective posters, titles, release years, ratings, and editors.
 - Allows users to search for a movie; if not found, a message will be displayed indicating that it is not available.
 - Implements pagination, showing a maximum of 12 movies per page; this may vary for computers and phones with different screen sizes.
-- Clicking on a selected movie will open a screen with all its details, including: **Title, release year, poster, rating, trailer, review, main cast, director, writer, and YouTube editor.**
+- Clicking on a selected movie will open a screen with all its details, including: **Title, release year, poster, category, rating, trailer, review, main cast, director, writer, and YouTube editor.**
 - For the trailer, users need to click on "watch trailer," and a popup will open with the trailer video.
+- As important information, at the bottom of the poster, you will find a button that, when clicked, will take you to the **streaming platform** where that movie is available.
 - As users scroll, a video player will appear with a movie summary extracted from YouTube, corresponding to the previously mentioned editor.
 - It is worth noting that the app is fully **responsive** across most devices.
 
