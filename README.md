@@ -1,5 +1,7 @@
 ## Movie App
 
+In general summary, **En Minutos** is a personal project that revolves around recommending movies and providing their summaries extracted from YouTube. Considering the high consumption of movie summaries, I thought it was a great idea to create a project that not only recommends but also allows users to view the summary if they don't have time to watch the entire film.
+
 ### Main features:
 
 - Displays a list of all available movies, along with their respective posters, titles, release years, ratings, and editors.
@@ -54,7 +56,7 @@ npm run start
 
 - API: It was developed in Python using Django and later deployed on **RENDER.**
 - DB: It was implemented in PostgreSQL and similarly deployed on **RENDER.**
-- The project is built with React.
+- The project is built with **React.**
 - React Router is used for navigation within the application.
 - The project includes various React components, such as MovieDetail, MovieList, Loading, Footer, and Header.
 - React Player is utilized for playing the trailers and summaries of the movies.
