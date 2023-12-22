@@ -44,7 +44,14 @@ npm run start
 
 -
 
-## Recursos
+## Resources
 
-- API: Fue realiza en python con Django y posteriormente desplegada en RENDER.
-- DB: Fue realiza en postgreSQL y desplegada de igual menera en RENDER.
+- API: It was developed in Python using Django and later deployed on RENDER.
+- DB: It was implemented in PostgreSQL and similarly deployed on RENDER.
+- The project is built with React.
+- React Router is used for navigation within the application.
+- The project includes various React components, such as MovieDetail, MovieList, Loading, Footer, and Header.
+- React Player is utilized for playing the trailers and summaries of the movies.
+- The application's styles are written in separate CSS files for each component.
+- ESLint is used for static code analysis and to identify coding issues.
+- VERCEL is used for deploying the application: https://en-minutos.vercel.app/
