@@ -57,6 +57,7 @@ npm run start
 
 - API: It was developed in Python using Django and later deployed on **RENDER.** [See API](https://api-movies-exam.onrender.com/movies)
 - DB: It was implemented in PostgreSQL and similarly deployed on **RENDER.**
+- Docker: for improved API deployment.
 - The project is built with **React.**
 - React Router is used for navigation within the application.
 - The project includes various React components, such as MovieDetail, MovieList, Loading, Footer, and Header.
