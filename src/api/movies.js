@@ -19,3 +19,8 @@ export const getStreamingForMovie = (movieId) => {
 export const getMoviesByGenre = (genre) => {
   return axios.get(`https://api-movies-exam.onrender.com/movies/genre?genre=${genre}`)
 }
+
+// API para agregar una película
+export const addMovie = (movie) => {
+  return axios.post('https://api-movies-exam.onrender.com/movies', movie);
+}
